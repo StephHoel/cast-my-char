@@ -1,5 +1,5 @@
 export function Home() {
   return (
-    <h1>Homepage</h1>
+    <h1 className="">Cast My Char</h1>
   )
 }

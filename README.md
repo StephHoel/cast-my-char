@@ -1,132 +1,116 @@
-# Scaffold React com React Router DOM e TailwindCSS
+# 🎭 CastMyChar
 
-Este projeto é um scaffold básico para iniciar o desenvolvimento de aplicações React utilizando **React Router DOM** para roteamento e **TailwindCSS** para estilização. Ele serve como ponto de partida para criar aplicações modernas e escaláveis com as ferramentas mencionadas.
-
----
-
-## 🛠 Tecnologias Utilizadas
-
-- **React**: Biblioteca para construção de interfaces de usuário.
-- **React Router DOM**: Biblioteca para gerenciar o roteamento da aplicação.
-- **TailwindCSS**: Framework CSS utilitário para estilização rápida e responsiva.
+**CastMyChar** é uma galeria visual de faceclaims (FCs) e playbys (PPs) para personagens de RPG e fanfics.  
+Com filtros avançados e responsividade total, você pode encontrar o rosto ideal para o seu personagem com rapidez e estilo.
 
 ---
 
-## ⚡️ Como Executar o Projeto
+## 🖼️ Demonstração
 
-### Pré-requisitos
-
-- Node.js (versão 16 ou superior)
-- npm ou yarn
-
-### Passo a passo
-
-1. Clone este repositório:
-
-   ```bash
-   git clone https://github.com/stephhoel/scaffold-react-router-tailwind.git
-   cd scaffold-react-router-tailwind
-   ```
-
-2. Instale as dependências:
-
-   ```bash
-   npm install
-   # ou
-   yarn install
-   ```
-
-3. Inicie o servidor de desenvolvimento:
-
-   ```bash
-   npm run dev
-   # ou
-   yarn run dev
-   ```
-
-4. Abra o navegador e acesse: `http://localhost:5173/`
+> 🔗 [Acesse o site online via GitHub Pages](https://stephhoel.github.io/castmychar)
 
 ---
 
-## 📂 Estrutura do Projeto
+## 🚀 Tecnologias
 
-```plaintext
-src/
-├── components/         # Componentes reutilizáveis
-├── pages/              # Páginas da aplicação
-│   ├── _layout.tsx     # Layout principal compartilhado entre as páginas
-│   ├── Home.tsx        # Página inicial
-│   ├── NotFound.tsx    # Página 404
-├── routes/             # Configuração de rotas
-├── index.css           # Estilos globais (inclui TailwindCSS)
-├── main.jsx            # Ponto de entrada da aplicação
-└── tailwind.config.js  # Configuração do TailwindCSS
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- GitHub Pages (deploy)
+
+---
+
+## 📁 Estrutura de Pastas
+
+```bash
+castmychar/
+├── public/                    # Arquivos públicos (favicon, imagens, etc.)
+├── src/
+│   ├── assets/                # Imagens e ícones do projeto
+│   ├── components/            # Componentes reutilizáveis
+│   │   ├── layout/
+│   │   │   ├── Header.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   └── LayoutWrapper.tsx
+│   │   ├── filters/
+│   │   │   └── Filters.tsx
+│   │   ├── actor/
+│   │   │   ├── ActorCard.tsx
+│   │   │   └── ActorList.tsx
+│   ├── data/                  # Dados estáticos em formato TS
+│   │   └── actors.ts
+│   ├── pages/                 # Páginas
+│   │   ├── Home.tsx
+│   │   └── NotFound.tsx
+│   ├── router/
+│   │   ├── index.tsx          # Define BrowserRouter
+│   │   └── routes.ts          # Define rotas
+│   ├── types/                 # Tipagens compartilhadas
+│   │   └── index.ts
+│   ├── index.css              # Estilos globais (Tailwind)
+│   ├── vite-env.d.ts
+│   └── main.tsx               # Ponto de entrada React
+├── .gitignore
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+````
+
+---
+
+## ✨ Funcionalidades
+
+* 🔍 **Busca por nome**
+* 🎚️ **Filtros combináveis** (nacionalidade, cor dos olhos, cor do cabelo, faixa etária etc.)
+* 🖼️ **Lista de atores/atrizes com imagem, nome e características**
+* 📱 **Totalmente responsivo** (desktop, tablet e mobile)
+* 🦶 **Rodapé fixo ou dinâmico**, conforme o conteúdo da página
+
+---
+
+## 📦 Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/stephhoel/castmychar.git
+cd castmychar
+
+# Instale as dependências
+npm install
 ```
 
 ---
 
-## 📜 Configuração do Roteamento
+## 🧪 Desenvolvimento local
 
-O arquivo de configuração das rotas está localizado em `src/routes/router.tsx`. O exemplo abaixo mostra como configurar uma rota simples:
-
-```jsx
-import { createBrowserRouter } from "react-router-dom"
-import { Home } from "../pages/Home"
-import { NotFound } from "../pages/NotFound"
-
-export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: "/*",
-    element: <NotFound />
-  }
-])
+```bash
+npm run dev
 ```
 
----
-
-## 🎨 Como Utilizar o TailwindCSS
-
-TailwindCSS já está configurado e pronto para uso. Basta adicionar as classes diretamente nos elementos.
-
-Exemplo:
-
-```jsx
-<div className="flex items-center justify-center h-screen bg-gray-100">
-  <h1 className="text-3xl font-bold text-blue-500">Bem-vindo ao Scaffold!</h1>
-</div>
-```
+Abra `http://localhost:5173` no navegador.
 
 ---
 
-## 🚀 Personalização
+## 🛠️ Build para produção
 
-1. **Configuração do TailwindCSS**:
-   O arquivo `tailwind.config.js` pode ser ajustado para atender às suas necessidades. Por exemplo, você pode adicionar novas cores ou configurações.
-
-2. **Estrutura das Rotas**:
-   Modifique ou adicione novas rotas no arquivo `src/routes/router.tsx`.
-
-3. **Componentes e Páginas**:
-   Adicione novos componentes em `src/components/` e páginas em `src/pages/`.
+Basta fazer um pull-request para a branch `main`.
 
 ---
 
-## 📝 Contribuição
+## 🌐 Deploy no GitHub Pages
 
-Se você deseja contribuir com este scaffold:
-
-1. Faça um fork deste repositório.
-2. Crie uma branch para sua funcionalidade: `git checkout -b minha-feature`.
-3. Faça commit das suas alterações: `git commit -m "Minha nova feature"`.
-4. Envie para o repositório remoto: `git push origin minha-feature`.
-5. Abra um Pull Request.
+> O deploy é feito a partir do **GitHub Actions** sempre que um novo pull-request é feito para a branch `main`.
 
 ---
 
-## 📄 Licença
+## 📖 Licença
 
-Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+MIT © [Steph Hoel](https://github.com/stephhoel)
