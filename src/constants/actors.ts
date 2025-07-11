@@ -1,0 +1,88 @@
+import { ActorProps } from '@/types/actor'
+
+export const actors: ActorProps[] = [
+  {
+    id: '1',
+    name: 'Alex Rivera',
+    nationality: ['Brasil', "Colômbia"],
+    eyeColor: 'Castanho',
+    hairColor: ['Preto', "Ruivo"],
+    ageRange: ['Jovem Adulto', "Criança"],
+    gender: ['Andrógeno'],
+    tags: ['olhar marcante', 'pele clara'],
+    photoUrl: {
+      big: 'https://github.com/stephhoel.png',
+      short: 'https://github.com/stephhoel.png',
+    },
+  },
+  {
+    id: '2',
+    name: 'Yumi Tanaka',
+    photoUrl: {
+      big: 'https://github.com/stephhoel.png',
+      short: 'https://github.com/stephhoel.png',
+    },
+    nationality: ['Japão'],
+    eyeColor: 'Preto',
+    hairColor: ['Castanho escuro'],
+    ageRange: ['Adulto'],
+    gender: ['Feminino'],
+    tags: ['expressiva', 'cis', 'formal'],
+  },
+  {
+    id: '3',
+    name: 'Gabriel Moreau',
+    photoUrl: {
+      big: 'https://github.com/stephhoel.png',
+      short: 'https://github.com/stephhoel.png',
+    },
+    nationality: ['França'],
+    eyeColor: 'Verde',
+    hairColor: ['Loiro'],
+    ageRange: ['Adolescente'],
+    gender: ['Masculino'],
+    tags: ['introspectivo', 'suave'],
+  },
+  {
+    id: '4',
+    name: 'Alex Rivera',
+    photoUrl: {
+      big: 'https://github.com/stephhoel.png',
+      short: 'https://github.com/stephhoel.png',
+    },
+    nationality: ['Brasil'],
+    eyeColor: 'Castanho',
+    hairColor: ['Preto'],
+    ageRange: ['Jovem Adulto'],
+    gender: ['Andrógeno'],
+    tags: ['olhar marcante', 'pele clara'],
+  },
+  {
+    id: '5',
+    name: 'Yumi Tanaka',
+    photoUrl: {
+      big: 'https://github.com/stephhoel.png',
+      short: 'https://github.com/stephhoel.png',
+    },
+    nationality: ['Japão'],
+    eyeColor: 'Preto',
+    hairColor: ['Castanho escuro'],
+    ageRange: ['Adulto'],
+    gender: ['Feminino'],
+    tags: ['expressiva', 'cis', 'formal'],
+  },
+  {
+    id: '6',
+    name: 'Gabriel Moreau',
+    photoUrl: {
+      big: 'https://github.com/stephhoel.png',
+      short: 'https://github.com/stephhoel.png',
+    },
+    nationality: ['França'],
+    eyeColor: 'Verde',
+    hairColor: ['Loiro'],
+    ageRange: ['Adolescente'],
+    gender: ['Masculino'],
+    tags: ['introspectivo', 'suave'],
+  },
+]

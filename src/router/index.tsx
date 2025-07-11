@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom"
-import { Home } from "../pages/Home"
-import { NotFound } from "../pages/NotFound"
-import { Request } from "../pages/Request"
+import { Home } from "@/pages/Home"
+import { NotFound } from "@/pages/NotFound"
+import { Request } from "@/pages/Request"
 
 export const router = createBrowserRouter([
   {
@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: '/new',
+    path: '/form',
     element: <Request />
   },
   {

@@ -1,7 +1,16 @@
 import type { PropsWithChildren } from "react";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
-export default function Layout({ children }: PropsWithChildren) {
+export function Layout({ children }: PropsWithChildren) {
   return (
-    <main className="text-5xl flex items-center justify-center h-screen">{children}</main>
+    <div className="flex flex-col max-w-full min-h-screen bg-gray-950 text-white">
+      <Header />
+      
+      <main className="flex-grow sm:mx-auto px-4 py-6">{children}</main>
+      
+      <Footer />
+    </div>
+    
   )
 };
