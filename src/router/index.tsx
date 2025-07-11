@@ -5,11 +5,11 @@ import { Request } from "@/pages/Request"
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Home />
   },
   {
-    path: '/form',
+    path: "/form",
     element: <Request />
   },
   {

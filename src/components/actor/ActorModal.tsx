@@ -24,7 +24,7 @@ export function ActorModal({ actor, onClose }: ActorModalProps) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-gray-900 text-white rounded-lg shadow-lg w-full max-w-lg max-h-[90vh] overflow-hidden flex flex-col"
+        className="bg-gray-900 text-white rounded-lg shadow-lg w-full lg:max-w-10/12 max-h-[90vh] overflow-hidden flex flex-col"
       >
         <div className="relative shrink-0">
           <img
@@ -34,15 +34,15 @@ export function ActorModal({ actor, onClose }: ActorModalProps) {
           />
           <button
             onClick={onClose}
-            className="absolute top-2 right-2 text-white bg-black bg-opacity-50 rounded-full p-1 hover:bg-opacity-75"
+            className="absolute top-2 right-2 text-white bg-black/70 rounded-full w-11 h-11 text-xl text-center justify-center p-2 hover:bg-black/85"
             aria-label="Fechar"
           >
-            ✖
+            ✖️
           </button>
         </div>
 
         <div className="p-4 space-y-3 overflow-y-auto text-2xl">
-          <h2 className="text-6xl font-bold">{actor.name}</h2>
+          <h2 className="text-4xl font-bold text-center">{actor.name}</h2>
 
           <Content title='Nacionalidade'>
             {CapitalizeAndFormat(actor.nationality)}

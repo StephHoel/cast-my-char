@@ -2,11 +2,16 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
@@ -20,16 +25,30 @@ jobs:
       - name: 🟦 Instalar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: '20'
 
       - name: 📦 Instalar dependências
-        run: npm install
+        run: npm ci
+
+      - name: 🔨 Configurar base do Vite para GitHub Pages
+        run: |
+          sed -i 's|base: \"/\"|base: "/cast-my-char/"|' vite.config.ts || echo "base já configurado"
+          sed -i 's|path: \"/|path: \"/cast-my-char/|' src/router/index.tsx || echo "rota já configurada"
 
       - name: 🛠️ Build do projeto
         run: npm run build
 
-      - name: 🚀 Deploy para o GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - name: 📁 Verificar pasta de build
+        id: check-dist
+        run: |
+          if [ -d "./dist" ]; then
+            echo "dist_dir=./dist" >> $GITHUB_OUTPUT
+          elif [ -d "../dist" ]; then
+            echo "dist_dir=../dist" >> $GITHUB_OUTPUT
+          else
+            echo "Erro: Pasta dist não encontrada!"
+            exit 1
+          fi
+
+      - name: 🚀 Deploy do Vite para o GitHub Pages
+        uses: skywarth/vite-github-pages-deployer@v1.5.0
