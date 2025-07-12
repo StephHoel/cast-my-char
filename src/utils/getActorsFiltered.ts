@@ -1,5 +1,5 @@
-import { ActorProps } from "@/types/actor"
-import { FiltersState } from "@/types/filtersState"
+import type { ActorProps } from "@/types/actor"
+import type { FiltersState } from "@/types/filtersState"
 import { Compare, Includes } from "./array"
 
 export function getActorsFiltered(filters: FiltersState, actors: ActorProps[]) {

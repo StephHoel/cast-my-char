@@ -4,7 +4,7 @@ import { Filters } from "@/components/filters/Filters";
 import { initial } from "@/constants/filtersState";
 import { useFiltersStorage } from "@/hooks/useFiltersStorage";
 import { getSheet } from "@/services/gSheets";
-import { ActorProps } from "@/types/actor";
+import type { ActorProps } from "@/types/actor";
 import { getActorsFiltered } from "@/utils/getActorsFiltered";
 import { Loader2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";

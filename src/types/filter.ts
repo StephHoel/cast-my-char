@@ -1,4 +1,4 @@
-import { FiltersState } from "./filtersState"
+import type { FiltersState } from "./filtersState"
 
 export type FiltersProps = {
   filters: FiltersState

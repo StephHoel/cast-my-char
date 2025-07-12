@@ -1,4 +1,4 @@
-import { SearchBarProps } from "@/types/searchBar";
+import type { SearchBarProps } from "@/types/searchBar";
 
 export function SearchBar({ value, onChange }: SearchBarProps) {
   return (

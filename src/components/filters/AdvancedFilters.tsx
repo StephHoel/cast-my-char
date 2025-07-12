@@ -1,4 +1,4 @@
-import { FiltersState } from "@/types/filtersState"
+import type { FiltersState } from "@/types/filtersState"
 import { getFilterOptions } from "@/utils/getFilters"
 import { useState } from "react"
 import { FilterGroup } from "./FilterGroup"

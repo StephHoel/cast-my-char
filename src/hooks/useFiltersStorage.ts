@@ -1,4 +1,4 @@
-import { FiltersState } from '@/types/filtersState'
+import type { FiltersState } from '@/types/filtersState'
 import { useEffect, useState } from 'react'
 
 const STORAGE_KEY = 'cast_my_char_filters'
