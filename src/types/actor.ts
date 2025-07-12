@@ -11,4 +11,5 @@ export type ActorProps = {
     big: string
     short: string
   }
+  isIntegrated: string
 }

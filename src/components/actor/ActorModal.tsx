@@ -1,3 +1,4 @@
+import placeholder from "@/assets/placeholder.svg"
 import { useEscapeKey } from '@/hooks/useEscapeKey'
 import { useScrollLock } from '@/hooks/useScrollLock'
 import { ActorModalProps } from '@/types/actorModal'
@@ -6,6 +7,10 @@ import { Content } from './ActorModalContent'
 
 export function ActorModal({ actor, onClose }: ActorModalProps) {
   const isOpen = !!actor
+
+  const image = actor && actor.photoUrl.short.trim().length > 0
+    ? actor.photoUrl.short
+    : placeholder
 
   useEscapeKey(() => {
     if (isOpen) onClose()
@@ -28,7 +33,7 @@ export function ActorModal({ actor, onClose }: ActorModalProps) {
       >
         <div className="relative shrink-0">
           <img
-            src={actor.photoUrl.short}
+            src={image}
             alt={actor.name}
             className="w-full h-64 object-cover rounded-t-lg"
           />

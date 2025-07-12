@@ -4,11 +4,11 @@
   
   "compilerOptions": {
     "jsx": "react-jsx",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "lib": ["es2024", "ESNext.Array", "ESNext.Collection", "ESNext.Iterator", "dom"],
+    "lib": ["es2024", "ESNext.Array", "ESNext.Collection", "ESNext.Iterator",   "dom"],
     // "module": "nodenext",
     // "target": "es2022",
     

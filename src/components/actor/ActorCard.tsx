@@ -1,10 +1,12 @@
 import { ActorCardProps } from '@/types/actorCard'
 
-
+import placeholder from "@/assets/placeholder.svg"
 
 export function ActorCard({ actor, onClick }: ActorCardProps) {
   const firstNationality = actor.nationality.sort()[0]
   const firstAge = actor.ageRange[0]
+
+  const image = actor.photoUrl.big.trim().length > 0 ? actor.photoUrl.big : placeholder 
 
   return (
     <button
@@ -13,7 +15,7 @@ export function ActorCard({ actor, onClick }: ActorCardProps) {
 
     >
       <img
-        src={actor.photoUrl.big}
+        src={image}
         alt={actor.name}
         className="w-full h-60 object-cover"
       />

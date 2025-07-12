@@ -4,7 +4,7 @@ import { Compare, Includes } from "./array"
 
 export function getActorsFiltered(filters: FiltersState, actors: ActorProps[]) {
   const trimmedName = filters.name.trim().toLowerCase()
-
+  
   return actors.filter((actor: ActorProps) => {
     const matchSearch =
       trimmedName === '' ||
