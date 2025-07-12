@@ -1,12 +1,13 @@
 import { ActorList } from "@/components/actor/ActorList";
 import { Filters } from "@/components/filters/Filters";
 import { actors } from "@/constants/actors";
+import { useFiltersStorage } from "@/hooks/useFiltersStorage";
 import { FiltersState } from "@/types/filtersState";
 import { getActorsFiltered } from "@/utils/getActorsFiltered";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 
 export function Home() {
-  const [filters, setFilters] = useState<FiltersState>({
+  const initial: FiltersState ={
     name: '',
     nationality: [],
     eyeColor: [],
@@ -14,7 +15,10 @@ export function Home() {
     ageRange: [],
     gender: [],
     tags: []
-  })
+  }
+
+  const [filters, setFilters] = useFiltersStorage(initial)
+
 
   const filteredActors = useMemo(() => {
     return getActorsFiltered(filters, actors)
