@@ -14,6 +14,7 @@ export const actors: ActorProps[] = [
       big: 'https://github.com/stephhoel.png',
       short: 'https://github.com/stephhoel.png',
     },
+    isIntegrated: 'Não',
   },
   {
     id: '2',
@@ -28,6 +29,7 @@ export const actors: ActorProps[] = [
     ageRange: ['Adulto'],
     gender: ['Feminino'],
     tags: ['expressiva', 'cis', 'formal'],
+    isIntegrated: 'Não',
   },
   {
     id: '3',
@@ -42,6 +44,7 @@ export const actors: ActorProps[] = [
     ageRange: ['Adolescente'],
     gender: ['Masculino'],
     tags: ['introspectivo', 'suave'],
+    isIntegrated: 'Não',
   },
   {
     id: '4',
@@ -56,6 +59,7 @@ export const actors: ActorProps[] = [
     ageRange: ['Jovem Adulto'],
     gender: ['Andrógeno'],
     tags: ['olhar marcante', 'pele clara'],
+    isIntegrated: 'Não',
   },
   {
     id: '5',
@@ -70,6 +74,7 @@ export const actors: ActorProps[] = [
     ageRange: ['Adulto'],
     gender: ['Feminino'],
     tags: ['expressiva', 'cis', 'formal'],
+    isIntegrated: 'Não',
   },
   {
     id: '6',
@@ -84,5 +89,6 @@ export const actors: ActorProps[] = [
     ageRange: ['Adolescente'],
     gender: ['Masculino'],
     tags: ['introspectivo', 'suave'],
+    isIntegrated: 'Não',
   },
 ]
