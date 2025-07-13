@@ -1,6 +1,6 @@
-import { ActorProps } from '@/types/actor'
-import { RawActorProps } from '@/types/rawActor'
-import { SugestionFormProps } from "@/types/sugestionForm"
+import type { ActorProps } from '@/types/actor'
+import type { RawActorProps } from '@/types/rawActor'
+import type { SugestionFormProps } from "@/types/sugestionForm"
 import Papa from 'papaparse'
 
 export async function sendForm(dados: SugestionFormProps) {

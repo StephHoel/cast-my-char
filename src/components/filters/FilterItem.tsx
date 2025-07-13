@@ -1,4 +1,4 @@
-import { FilterItemProps } from "@/types/filterItem";
+import type { FilterItemProps } from "@/types/filterItem";
 
 export function FilterItem({ option, isActive, onToggle }: FilterItemProps) {
   return (

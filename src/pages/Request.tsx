@@ -3,7 +3,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from '@/components/ui/input';
 import { useSugestionForm } from '@/hooks/useForm';
 import { sendForm } from '@/services/gSheets';
-import { SugestionFormProps } from "@/types/sugestionForm";
+import type { SugestionFormProps } from "@/types/sugestionForm";
 
 export function Request() {
   const sugestionForm = useSugestionForm()

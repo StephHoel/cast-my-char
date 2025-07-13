@@ -1,4 +1,4 @@
-import { FilterGroupProps } from "@/types/filterGroup"
+import type { FilterGroupProps } from "@/types/filterGroup"
 import { FilterItem } from "./FilterItem"
 
 export function FilterGroup({ title, options, selected, onToggle }: FilterGroupProps) {

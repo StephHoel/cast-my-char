@@ -1,7 +1,7 @@
 import placeholder from "@/assets/placeholder.svg"
 import { useEscapeKey } from '@/hooks/useEscapeKey'
 import { useScrollLock } from '@/hooks/useScrollLock'
-import { ActorModalProps } from '@/types/actorModal'
+import type { ActorModalProps } from '@/types/actorModal'
 import { Capitalize, CapitalizeAndFormat } from '@/utils/array'
 import { Content } from './ActorModalContent'
 

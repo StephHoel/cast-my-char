@@ -30,12 +30,6 @@ jobs:
       - name: 📦 Instalar dependências
         run: npm ci
 
-      - name: 🔨 Configurar base do Vite para GitHub Pages
-        run: |
-          sed -i 's|base: \"/\"|base: "/cast-my-char/"|' vite.config.ts || echo "base já configurado"
-          sed -i 's|path: \"/|path: \"/cast-my-char/|' src/router/index.tsx || echo "rota já configurada"
-          sed -i 's|href=\"/\"|href=\"/cast-my-char/\"|' src/pages/NotFound.tsx || echo "notfound já configurada"
-
       - name: 🛠️ Build do projeto
         run: npm run build
 

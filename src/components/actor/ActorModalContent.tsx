@@ -1,4 +1,4 @@
-import { ContentProps } from "@/types/content";
+import type { ContentProps } from "@/types/content";
 
 export function Content({ title, children }: ContentProps) {
   return (

@@ -1,5 +1,5 @@
 import { sugestionFormSchema } from "@/schemas/sugestionForm";
-import { SugestionFormProps } from "@/types/sugestionForm";
+import type { SugestionFormProps } from "@/types/sugestionForm";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 

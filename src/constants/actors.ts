@@ -1,4 +1,4 @@
-import { ActorProps } from '@/types/actor'
+import type { ActorProps } from '@/types/actor'
 
 export const actors: ActorProps[] = [
   {

@@ -1,5 +1,5 @@
 import { actors } from "@/constants/actors"
-import { FiltersState } from "@/types/filtersState"
+import type { FiltersState } from "@/types/filtersState"
 import { Capitalize } from "./array"
 
 export function getFilterOptions() {

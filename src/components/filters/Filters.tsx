@@ -1,5 +1,5 @@
-import { FiltersProps } from '@/types/filter'
-import { FiltersState } from '@/types/filtersState'
+import type { FiltersProps } from '@/types/filter'
+import type { FiltersState } from '@/types/filtersState'
 import { AdvancedFilters } from './AdvancedFilters'
 import { SearchBar } from './SearchBar'
 
