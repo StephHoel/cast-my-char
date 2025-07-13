@@ -3,9 +3,9 @@ import { ActorList } from "@/components/actor/ActorList";
 import { Filters } from "@/components/filters/Filters";
 import { initial } from "@/constants/filtersState";
 import { useFiltersStorage } from "@/hooks/useFiltersStorage";
-import { getSheet } from "@/services/gSheets";
+import { getFamous } from "@/services/getFamousFromSheet";
 import type { ActorProps } from "@/types/actor";
-import { getActorsFiltered } from "@/utils/getActorsFiltered";
+import { getActorsFiltered } from "@/utils/filterActors";
 import { Loader2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
@@ -26,7 +26,7 @@ export function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const famous = await getSheet()
+        const famous = await getFamous()
         const integrated = famous.filter(actor => actor.isIntegrated !== "Não")
         setList(integrated)
       } catch (error) {

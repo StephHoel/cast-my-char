@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { useSugestionForm } from '@/hooks/useForm';
-import { sendForm } from '@/services/gSheets';
+import { sendForm } from '@/services/sendForm';
 import type { SugestionFormProps } from "@/types/sugestionForm";
 
 export function Request() {

@@ -11,7 +11,6 @@ export function getActorsFiltered(filters: FiltersState, actors: ActorProps[]) {
       actor.name.toLowerCase().includes(trimmedName) ||
       actor.tags?.some((tag) => tag.toLowerCase().includes(trimmedName))
 
-
     const matchNationality =
       filters.nationality.length === 0 ||
       filters.nationality.some((nat) => Includes(actor.nationality, nat))

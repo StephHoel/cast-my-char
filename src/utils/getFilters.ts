@@ -1,6 +1,6 @@
 import { actors } from "@/constants/actors"
 import type { FiltersState } from "@/types/filtersState"
-import { Capitalize } from "./array"
+import { capitalize } from "./formatArray"
 
 export function getFilterOptions() {
   const nationalities = new Set<string>()
@@ -11,14 +11,14 @@ export function getFilterOptions() {
   const tags = new Set<string>()
 
   for (const actor of actors) {
-    actor.nationality?.forEach((n) => nationalities.add(Capitalize(n)))
-    actor.hairColor?.forEach((h) => hairColors.add(Capitalize(h)))
-    actor.ageRange?.forEach((a) => ageRanges.add(Capitalize(a)))
-    actor.gender?.forEach((t) => genders.add(Capitalize(t)))
-    actor.tags?.forEach((t) => tags.add(Capitalize(t)))
+    actor.nationality?.forEach((n) => nationalities.add(capitalize(n)))
+    actor.hairColor?.forEach((h) => hairColors.add(capitalize(h)))
+    actor.ageRange?.forEach((a) => ageRanges.add(capitalize(a)))
+    actor.gender?.forEach((t) => genders.add(capitalize(t)))
+    actor.tags?.forEach((t) => tags.add(capitalize(t)))
 
     if (actor.eyeColor)
-      eyeColors.add(Capitalize(actor.eyeColor))
+      eyeColors.add(capitalize(actor.eyeColor))
 
   }
 

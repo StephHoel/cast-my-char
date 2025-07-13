@@ -2,8 +2,8 @@ import placeholder from "@/assets/placeholder.svg"
 import { useEscapeKey } from '@/hooks/useEscapeKey'
 import { useScrollLock } from '@/hooks/useScrollLock'
 import type { ActorModalProps } from '@/types/actorModal'
-import { Capitalize, CapitalizeAndFormat } from '@/utils/array'
 import { Content } from './ActorModalContent'
+import { capitalize, formatArray } from "@/utils/formatArray"
 
 export function ActorModal({ actor, onClose }: ActorModalProps) {
   const isOpen = !!actor
@@ -50,28 +50,28 @@ export function ActorModal({ actor, onClose }: ActorModalProps) {
           <h2 className="text-4xl font-bold text-center">{actor.name}</h2>
 
           <Content title='Nacionalidade'>
-            {CapitalizeAndFormat(actor.nationality)}
+            {formatArray(actor.nationality)}
           </Content>
 
           <Content title='Cor dos olhos'>
-            {Capitalize(actor.eyeColor)}
+            {capitalize(actor.eyeColor)}
           </Content>
 
           <Content title='Cor do cabelo'>
-            {CapitalizeAndFormat(actor.hairColor)}
+            {formatArray(actor.hairColor)}
           </Content>
 
           <Content title='Faixa etária'>
-            {CapitalizeAndFormat(actor.ageRange)}
+            {formatArray(actor.ageRange)}
           </Content>
 
           <Content title='Gênero'>
-            {CapitalizeAndFormat(actor.gender)}
+            {formatArray(actor.gender)}
           </Content>
 
           {actor.tags?.length > 0 && (
             <Content title='Outras Características'>
-              {CapitalizeAndFormat(actor.tags)}
+              {formatArray(actor.tags)}
             </Content>
           )}
         </div>
