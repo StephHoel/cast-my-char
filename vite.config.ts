@@ -1,6 +1,6 @@
+import path from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
-import path from 'node:path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -13,11 +13,10 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ['papaparse'],
-    include: ['uuid'],
   },
   server: {
     warmup: {
-      clientFiles: ['src/utils/getActorsFiltered.ts', 'src/components/filters/Filters.tsx'],
+      clientFiles: ['src/utils/filterActors.ts', 'src/components/filters/Filters.tsx'],
     },
   },
 })

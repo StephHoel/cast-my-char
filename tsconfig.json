@@ -1,6 +1,8 @@
 {
   "files": [],
-  "include": ["src"],
+  "include": [
+    // "src"
+  ],
   "references": [
     {
       "path": "./tsconfig.app.json"
@@ -8,17 +10,5 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ],
-  "compilerOptions": {
-    "strictNullChecks": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
-  }
+  ]
 }
