@@ -1,4 +1,4 @@
-import type { FiltersState } from "@/types/filtersState";
+import type { FiltersState } from '@/types/filtersState'
 
 export const initial: FiltersState = {
   name: '',
@@ -7,5 +7,5 @@ export const initial: FiltersState = {
   hairColor: [],
   ageRange: [],
   gender: [],
-  tags: []
+  tags: [],
 }

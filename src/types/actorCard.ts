@@ -1,4 +1,4 @@
-import type { ActorProps } from "./actor"
+import type { ActorProps } from './actor'
 
 export type ActorCardProps = {
   actor: ActorProps

@@ -9,21 +9,13 @@ export function ActorList({ actors }: ActorListProps) {
   actors = actors.sort((a, b) => a.name.localeCompare(b.name))
 
   if (actors.length === 0) {
-    return (
-      <p className="text-center text-zinc-400 mt-8">
-        Nenhum ator ou atriz encontrado com os filtros atuais.
-      </p>
-    )
+    return <p className='mt-8 text-center text-zinc-400'>Nenhum ator ou atriz encontrado com os filtros atuais.</p>
   }
 
   return (
-    <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6`}>
+    <div className={`grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4`}>
       {actors.map((actor) => (
-        <ActorCard
-          key={actor.id}
-          actor={actor}
-          onClick={() => setSelectedActor(actor)}
-        />
+        <ActorCard key={actor.id} actor={actor} onClick={() => setSelectedActor(actor)} />
       ))}
 
       <ActorModal actor={selectedActor} onClose={() => setSelectedActor(null)} />

@@ -1,6 +1,5 @@
+import placeholder from '@/assets/placeholder.svg'
 import type { ActorCardProps } from '@/types/actorCard'
-
-import placeholder from "@/assets/placeholder.svg"
 
 export function ActorCard({ actor, onClick }: ActorCardProps) {
   const firstNationality = actor.nationality.sort()[0]
@@ -11,24 +10,19 @@ export function ActorCard({ actor, onClick }: ActorCardProps) {
   return (
     <button
       onClick={onClick}
-      className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg focus:outline-none transition w-full text-left "
-
+      className='w-full overflow-hidden rounded-lg bg-gray-800 text-left shadow-md transition hover:shadow-lg focus:outline-none'
     >
-      <img
-        src={image}
-        alt={actor.name}
-        className="w-full h-60 object-cover"
-      />
+      <img src={image} alt={actor.name} className='h-60 w-full object-cover' />
 
-      <div className="p-4">
-        <h2 className="text-lg font-semibold text-white">{actor.name}</h2>
+      <div className='p-4'>
+        <h2 className='text-lg font-semibold text-white'>{actor.name}</h2>
 
-        <p className="text-sm text-gray-400">
-          {firstNationality + (actor.nationality.length > 1 ? ` + ${actor.nationality.length - 1}` : "")}
+        <p className='text-sm text-gray-400'>
+          {firstNationality + (actor.nationality.length > 1 ? ` + ${actor.nationality.length - 1}` : '')}
         </p>
 
-        <p className="text-sm text-gray-400">
-          {firstAge + (actor.ageRange.length > 1 ? ` + ${actor.ageRange.length - 1}` : "")}
+        <p className='text-sm text-gray-400'>
+          {firstAge + (actor.ageRange.length > 1 ? ` + ${actor.ageRange.length - 1}` : '')}
         </p>
       </div>
     </button>

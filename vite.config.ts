@@ -1,15 +1,23 @@
-import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
-import path from "node:path";
-import { defineConfig } from "vite";
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+import path from 'node:path'
+import { defineConfig } from 'vite'
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: '/cast-my-char/',
   plugins: [react(), tailwindcss()],
-  base: '/cast-my-char/', // nome do repositório com barra no fim
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
-});
+  optimizeDeps: {
+    exclude: ['papaparse'],
+    include: ['uuid'],
+  },
+  server: {
+    warmup: {
+      clientFiles: ['src/utils/getActorsFiltered.ts', 'src/components/filters/Filters.tsx'],
+    },
+  },
+})

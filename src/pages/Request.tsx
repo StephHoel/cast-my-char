@@ -1,9 +1,9 @@
-import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { useSugestionForm } from '@/hooks/useForm';
-import { sendForm } from '@/services/sendForm';
-import type { SugestionFormProps } from "@/types/sugestionForm";
+import { Button } from '@/components/ui/button'
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { useSugestionForm } from '@/hooks/useForm'
+import { sendForm } from '@/services/sendForm'
+import type { SugestionFormProps } from '@/types/sugestionForm'
 
 export function Request() {
   const sugestionForm = useSugestionForm()
@@ -17,7 +17,7 @@ export function Request() {
   return (
     <div>
       <Form {...sugestionForm}>
-        <form onSubmit={sugestionForm.handleSubmit(handleSubmitForm)} className="flex flex-col gap-12">
+        <form onSubmit={sugestionForm.handleSubmit(handleSubmitForm)} className='flex flex-col gap-12'>
           <FormField
             control={sugestionForm.control}
             name='name'
@@ -46,23 +46,18 @@ export function Request() {
               return (
                 <FormItem>
                   <FormLabel>Link do Perfil</FormLabel>
-                  <FormDescription>Informe o link do perfil ou IMDB ou Wikipedia para nos ajudar a registrar o famoso correto</FormDescription>
+                  <FormDescription>
+                    Informe o link do perfil ou IMDB ou Wikipedia para nos ajudar a registrar o famoso correto
+                  </FormDescription>
                   <FormControl>
-                    <Input
-                      {...field}
-                      disabled={isSubmitting}
-                      placeholder='Informe o link do perfil'
-                    />
+                    <Input {...field} disabled={isSubmitting} placeholder='Informe o link do perfil' />
                   </FormControl>
                 </FormItem>
               )
             }}
           />
 
-          <Button
-            disabled={isSubmitting}
-            type='submit'
-          >
+          <Button disabled={isSubmitting} type='submit'>
             Registrar Pedido
           </Button>
         </form>

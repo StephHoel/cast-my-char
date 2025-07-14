@@ -4,10 +4,10 @@ export const actors: ActorProps[] = [
   {
     id: '1',
     name: 'Alex Rivera',
-    nationality: ['Brasil', "Colômbia"],
+    nationality: ['Brasil', 'Colômbia'],
     eyeColor: 'Castanho',
-    hairColor: ['Preto', "Ruivo"],
-    ageRange: ['Jovem Adulto', "Criança"],
+    hairColor: ['Preto', 'Ruivo'],
+    ageRange: ['Jovem Adulto', 'Criança'],
     gender: ['Andrógeno'],
     tags: ['olhar marcante', 'pele clara'],
     photoUrl: {

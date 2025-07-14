@@ -1,14 +1,14 @@
-import { SHEET_URL } from "@/constants/routes"
-import type { ActorProps } from "@/types/actor"
-import type { RawActorProps } from "@/types/rawActor"
-import { Split } from "@/utils/formatString"
-import Papa from "papaparse"
+import { SHEET_URL } from '@/constants/routes'
+import type { ActorProps } from '@/types/actor'
+import type { RawActorProps } from '@/types/rawActor'
+import { Split } from '@/utils/formatString'
+import Papa from 'papaparse'
 
 export async function getFamous(): Promise<ActorProps[]> {
   const response = await fetch(SHEET_URL)
   const csvText = await response.text()
 
-  return new Promise((resolve, _) => {
+  return new Promise((resolve) => {
     Papa.parse<RawActorProps>(csvText, {
       header: true,
       skipEmptyLines: true,
@@ -26,10 +26,10 @@ export async function getFamous(): Promise<ActorProps[]> {
             big: entry['photoUrl.big'],
             short: entry['photoUrl.short'],
           },
-          isIntegrated: entry.isIntegrated
+          isIntegrated: entry.isIntegrated,
         }))
         resolve(actors)
-      }
+      },
     })
   })
 }

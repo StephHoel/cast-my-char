@@ -1,15 +1,16 @@
-import type { FilterItemProps } from "@/types/filterItem";
+import type { FilterItemProps } from '@/types/filterItem'
 
 export function FilterItem({ option, isActive, onToggle }: FilterItemProps) {
   return (
     <button
-      type="button"
+      type='button'
       onClick={() => onToggle(option)}
       className={`
-        px-3 py-1 rounded-full border text-sm transition 
-        ${isActive
-          ? 'bg-blue-500 text-white border-blue-500'
-          : 'bg-gray-800 text-gray-300 border-gray-600 hover:border-gray-400'
+        rounded-full border px-3 py-1 text-sm transition 
+        ${
+          isActive
+            ? 'border-blue-500 bg-blue-500 text-white'
+            : 'border-gray-600 bg-gray-800 text-gray-300 hover:border-gray-400'
         }
       `}
     >

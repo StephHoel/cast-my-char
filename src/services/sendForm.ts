@@ -1,4 +1,4 @@
-import type { SugestionFormProps } from "@/types/sugestionForm"
+import type { SugestionFormProps } from '@/types/sugestionForm'
 
 export async function sendForm(dados: SugestionFormProps) {
   const formData = new FormData()
@@ -13,7 +13,7 @@ export async function sendForm(dados: SugestionFormProps) {
   formData.append('entry.640708584', dados.tags)
   formData.append('entry.1187744977', dados.big)
   formData.append('entry.611006121', dados.short)
-  formData.append('entry.1769110141', "Não")
+  formData.append('entry.1769110141', 'Não')
 
   await fetch(
     'https://docs.google.com/forms/d/e/1FAIpQLSevk0ft50lR2EXAiPF_0Tu4McEjjg-ePy--BoDHeq8VpGhoRA/formResponse',
@@ -21,7 +21,7 @@ export async function sendForm(dados: SugestionFormProps) {
       method: 'POST',
       mode: 'no-cors',
       body: formData,
-    }
+    },
   )
 
   alert('Enviado! Obrigada 🎉')

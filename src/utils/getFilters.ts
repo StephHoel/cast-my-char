@@ -1,6 +1,6 @@
-import { actors } from "@/constants/actors"
-import type { FiltersState } from "@/types/filtersState"
-import { capitalize } from "./formatArray"
+import { actors } from '@/constants/actors'
+import type { FiltersState } from '@/types/filtersState'
+import { capitalize } from './formatArray'
 
 export function getFilterOptions() {
   const nationalities = new Set<string>()
@@ -17,9 +17,7 @@ export function getFilterOptions() {
     actor.gender?.forEach((t) => genders.add(capitalize(t)))
     actor.tags?.forEach((t) => tags.add(capitalize(t)))
 
-    if (actor.eyeColor)
-      eyeColors.add(capitalize(actor.eyeColor))
-
+    if (actor.eyeColor) eyeColors.add(capitalize(actor.eyeColor))
   }
 
   const filtersOptions: FiltersState = {
@@ -29,7 +27,7 @@ export function getFilterOptions() {
     eyeColor: Array.from(eyeColors).sort(),
     hairColor: Array.from(hairColors).sort(),
     ageRange: Array.from(ageRanges).sort(),
-    tags: Array.from(tags).sort()
+    tags: Array.from(tags).sort(),
   }
 
   return filtersOptions

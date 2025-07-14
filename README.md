@@ -9,6 +9,22 @@ Com filtros avançados e responsividade total, você pode encontrar o rosto idea
 
 > 🔗 [Acesse o site online via GitHub Pages](https://stephhoel.github.io/castmychar)
 
+<!--
+  Quero implementar:
+  - ~~[entender] HMR mais leve e rápido~~
+  - ~~Extrair services e utils~~
+  - ~~Biome + Tipagem Mais Estrita~~
+  - Otimização da Build com Vite
+  - Melhor experiência de dev
+  - Testes automatizados
+  - Lazy loading de imagens
+  - Paginação ou infinite scroll
+  - Code Splitting via Rotas Dinâmicas
+  - Validação e animações com feedback
+  - Página de solicitação de inclusão de PP (com todos os campos)
+  - Página de solicitação de edição de PP (com nome do pp sem possibilidade de edição + campo para dizer oq precisa ser editado)
+-->
+
 ---
 
 ## 🚀 Tecnologias

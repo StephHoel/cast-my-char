@@ -1,9 +1,9 @@
-import { Layout } from "@/components/layout/LayoutWrapper"
-import { url } from "@/constants/routes"
-import { Home } from "@/pages/Home"
-import { NotFound } from "@/pages/NotFound"
-import { Request } from "@/pages/Request"
-import { createBrowserRouter } from "react-router-dom"
+import { Layout } from '@/components/layout/LayoutWrapper'
+import { url } from '@/constants/routes'
+import { Home } from '@/pages/Home'
+import { NotFound } from '@/pages/NotFound'
+import { Request } from '@/pages/Request'
+import { createBrowserRouter } from 'react-router-dom'
 
 export const router = createBrowserRouter(
   [
@@ -12,20 +12,20 @@ export const router = createBrowserRouter(
       children: [
         {
           path: url.index,
-          element: <Home />
+          element: <Home />,
         },
         {
           path: url.form,
-          element: <Request />
+          element: <Request />,
         },
         {
           path: url.notFound,
-          element: <NotFound />
-        }
+          element: <NotFound />,
+        },
       ],
-    }
+    },
   ],
   {
     basename: url.base,
-  }
+  },
 )

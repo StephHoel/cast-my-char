@@ -7,24 +7,16 @@ export function Filters({ filters, onChange }: FiltersProps) {
   const toggleItem = (key: keyof FiltersState, value: string) => {
     const list = filters[key] as string[]
 
-    const newList = list.includes(value)
-      ? list.filter((v) => v !== value)
-      : [...list, value]
+    const newList = list.includes(value) ? list.filter((v) => v !== value) : [...list, value]
 
     onChange({ ...filters, [key]: newList })
   }
 
   return (
-    <section className="bg-gray-900 text-white p-4 rounded-lg shadow-md mb-6">
-      <SearchBar
-        value={filters.name}
-        onChange={(value) => onChange({ ...filters, name: value })}
-      />
+    <section className='mb-6 rounded-lg bg-gray-900 p-4 text-white shadow-md'>
+      <SearchBar value={filters.name} onChange={(value) => onChange({ ...filters, name: value })} />
 
-      <AdvancedFilters
-        filters={filters}
-        toggleItem={toggleItem}
-      />
+      <AdvancedFilters filters={filters} toggleItem={toggleItem} />
     </section>
   )
 }

@@ -1,5 +1,5 @@
 export type RawActorProps = {
-  "Carimbo de data/hora": string
+  'Carimbo de data/hora': string
   link: string
   isIntegrated: string
   id: string
@@ -10,6 +10,6 @@ export type RawActorProps = {
   ageRange: string
   gender: string
   tags: string
-  "photoUrl.big": string
-  "photoUrl.short": string
+  'photoUrl.big': string
+  'photoUrl.short': string
 }
