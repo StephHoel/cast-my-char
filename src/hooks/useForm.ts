@@ -1,7 +1,7 @@
-import { sugestionFormSchema } from '@/schemas/sugestionForm'
-import type { SugestionFormProps } from '@/types/sugestionForm'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { sugestionFormSchema } from '@/schemas/sugestionForm'
+import type { SugestionFormProps } from '@/types/sugestionForm'
 
 export function useSugestionForm() {
   return useForm<SugestionFormProps>({

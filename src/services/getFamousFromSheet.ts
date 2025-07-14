@@ -1,8 +1,8 @@
+import Papa from 'papaparse'
 import { SHEET_URL } from '@/constants/routes'
 import type { ActorProps } from '@/types/actor'
 import type { RawActorProps } from '@/types/rawActor'
 import { Split } from '@/utils/formatString'
-import Papa from 'papaparse'
 
 export async function getFamous(): Promise<ActorProps[]> {
   const response = await fetch(SHEET_URL)

@@ -1,5 +1,5 @@
-import type { FiltersState } from '@/types/filtersState'
 import { useEffect, useState } from 'react'
+import type { FiltersState } from '@/types/filtersState'
 
 const STORAGE_KEY = 'cast_my_char_filters'
 

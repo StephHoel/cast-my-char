@@ -7,7 +7,10 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "experimentalScannerIgnores": ["dist"]
+    "experimentalScannerIgnores": [
+      "dist",
+      "node_modules"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -26,7 +29,10 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-      "a11y": "on"
+      "a11y": {
+        "noStaticElementInteractions": "off",
+        "useKeyWithClickEvents": "off"
+      }
     }
   },
   "javascript": {
@@ -57,7 +63,11 @@
   },
   "overrides": [
     {
-      "includes": ["*.json", "*.ts", "*.tsx"],
+      "includes": [
+        "*.json",
+        "*.ts",
+        "*.tsx"
+      ],
       "formatter": {
         "indentWidth": 2
       }

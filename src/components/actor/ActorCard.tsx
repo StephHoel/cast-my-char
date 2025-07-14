@@ -9,6 +9,7 @@ export function ActorCard({ actor, onClick }: ActorCardProps) {
 
   return (
     <button
+      type='button'
       onClick={onClick}
       className='w-full overflow-hidden rounded-lg bg-gray-800 text-left shadow-md transition hover:shadow-lg focus:outline-none'
     >

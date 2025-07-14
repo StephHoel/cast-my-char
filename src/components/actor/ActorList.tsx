@@ -1,7 +1,7 @@
+import { useState } from 'react'
 import { ActorCard } from '@/components/actor/ActorCard'
 import type { ActorProps } from '@/types/actor'
 import type { ActorListProps } from '@/types/actorList'
-import { useState } from 'react'
 import { ActorModal } from './ActorModal'
 
 export function ActorList({ actors }: ActorListProps) {

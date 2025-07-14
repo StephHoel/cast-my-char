@@ -2,8 +2,8 @@ import placeholder from '@/assets/placeholder.svg'
 import { useEscapeKey } from '@/hooks/useEscapeKey'
 import { useScrollLock } from '@/hooks/useScrollLock'
 import type { ActorModalProps } from '@/types/actorModal'
-import { Content } from './ActorModalContent'
 import { capitalize, formatArray } from '@/utils/formatArray'
+import { Content } from './ActorModalContent'
 
 export function ActorModal({ actor, onClose }: ActorModalProps) {
   const isOpen = !!actor
@@ -32,6 +32,7 @@ export function ActorModal({ actor, onClose }: ActorModalProps) {
         <div className='relative shrink-0'>
           <img src={image} alt={actor.name} className='h-64 w-full rounded-t-lg object-cover' />
           <button
+            type='button'
             onClick={onClose}
             className='absolute right-2 top-2 size-11 justify-center rounded-full bg-black/70 p-2 text-center text-xl text-white hover:bg-black/85'
             aria-label='Fechar'
