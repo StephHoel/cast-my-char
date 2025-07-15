@@ -1,44 +1,37 @@
+import { ArrowLeft } from 'lucide-react'
+import { useParams } from 'react-router-dom'
 import placeholder from '@/assets/placeholder.svg'
-import { useEscapeKey } from '@/hooks/useEscapeKey'
-import { useScrollLock } from '@/hooks/useScrollLock'
-import type { ActorModalProps } from '@/types/actorModal'
+import { Content } from '@/components/actor/ActorContent'
+import { useActors } from '@/components/layout/LayoutWrapper'
+import { Loading } from '@/components/layout/Loading'
+import { url } from '@/constants/routes'
 import { capitalize, formatArray } from '@/utils/formatArray'
-import { Content } from './ActorModalContent'
 
-export function ActorModal({ actor, onClose }: ActorModalProps) {
-  const isOpen = !!actor
+export function Famous() {
+  const { id } = useParams<{ id: string }>()
+  const { actors, loading } = useActors()
 
+  const actor = actors.find((a) => a.id === id)
   const image = actor && actor.photoUrl.short.trim().length > 0 ? actor.photoUrl.short : placeholder
 
-  useEscapeKey(() => {
-    if (isOpen) onClose()
-  })
+  if (loading) return <Loading />
 
-  useScrollLock(isOpen)
-
-  if (!isOpen) return null
+  if (!actor) return <p>Famoso ou Famosa não encontrado.</p>
 
   return (
-    <div
-      className='fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4'
-      onClick={onClose}
-      role='dialog'
-      aria-modal='true'
-    >
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className='lg:max-w-10/12 flex max-h-[90vh] w-full flex-col overflow-hidden rounded-lg bg-gray-900 text-white shadow-lg'
-      >
+    <div>
+      <div className='lg:max-w-10/12 flex max-h-[90vh] w-full flex-col overflow-hidden rounded-lg bg-gray-900 text-white shadow-lg'>
         <div className='relative shrink-0'>
           <img src={image} alt={actor.name} className='h-64 w-full rounded-t-lg object-cover' />
-          <button
-            type='button'
-            onClick={onClose}
-            className='absolute right-2 top-2 size-11 justify-center rounded-full bg-black/70 p-2 text-center text-xl text-white hover:bg-black/85'
+
+          <a
+            href={url.index}
+            className='flex gap-1 items-center justify-center absolute left-2 top-2 items-center justify-center rounded-full bg-black/70 p-2 text-center text-xl text-white hover:bg-black/85'
             aria-label='Fechar'
           >
-            ✖️
-          </button>
+            <ArrowLeft />
+            Back
+          </a>
         </div>
 
         <div className='space-y-3 overflow-y-auto p-4 text-2xl'>

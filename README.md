@@ -14,12 +14,12 @@ Com filtros avançados e responsividade total, você pode encontrar o rosto idea
   - ~~[entender] HMR mais leve e rápido~~
   - ~~Extrair services e utils~~
   - ~~Biome + Tipagem Mais Estrita~~
-  - Otimização da Build com Vite
+  - ~~Otimização da Build com Vite~~
+  - ~~Lazy loading de imagens~~
+  - ~~Code Splitting via Rotas Dinâmicas~~
   - Melhor experiência de dev
   - Testes automatizados
-  - Lazy loading de imagens
   - Paginação ou infinite scroll
-  - Code Splitting via Rotas Dinâmicas
   - Validação e animações com feedback
   - Página de solicitação de inclusão de PP (com todos os campos)
   - Página de solicitação de edição de PP (com nome do pp sem possibilidade de edição + campo para dizer oq precisa ser editado)

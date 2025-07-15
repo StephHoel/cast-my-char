@@ -4,15 +4,12 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/cast-my-char/',
+  base: '/cast-my-char',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-  },
-  optimizeDeps: {
-    exclude: ['papaparse'],
   },
   server: {
     warmup: {

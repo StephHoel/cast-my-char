@@ -1,8 +1,8 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, Navigate } from 'react-router-dom'
 import { Layout } from '@/components/layout/LayoutWrapper'
 import { url } from '@/constants/routes'
+import { Famous } from '@/pages/Famous/[id]'
 import { Home } from '@/pages/Home'
-import { NotFound } from '@/pages/NotFound'
 import { Request } from '@/pages/Request'
 
 export const router = createBrowserRouter(
@@ -19,8 +19,12 @@ export const router = createBrowserRouter(
           element: <Request />,
         },
         {
+          path: url.famous,
+          element: <Famous />,
+        },
+        {
           path: url.notFound,
-          element: <NotFound />,
+          element: <Navigate to={'/'} replace={true} />,
         },
       ],
     },

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
+import { STORAGE_KEY } from '@/constants/cache'
 import type { FiltersState } from '@/types/filtersState'
-
-const STORAGE_KEY = 'cast_my_char_filters'
 
 export function useFiltersStorage(initial: FiltersState) {
   const [filters, setFilters] = useState<FiltersState>(() => {

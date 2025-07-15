@@ -2,7 +2,8 @@ export const url = {
   base: '/cast-my-char',
   index: '/',
   form: '/?/form',
-  notFound: '/*',
+  famous: '/?/famous/:id',
+  notFound: '*',
 }
 
 export const SHEET_URL =

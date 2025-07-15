@@ -1,51 +1,22 @@
-'use client'
-import { Loader2 } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
 import { ActorList } from '@/components/actor/ActorList'
 import { Filters } from '@/components/filters/Filters'
+import { useActors } from '@/components/layout/LayoutWrapper'
+import { Loading } from '@/components/layout/Loading'
 import { initial } from '@/constants/filtersState'
 import { useFiltersStorage } from '@/hooks/useFiltersStorage'
-import { getFamous } from '@/services/getFamousFromSheet'
-import type { ActorProps } from '@/types/actor'
-import { getActorsFiltered } from '@/utils/filterActors'
 
 export function Home() {
   const [filters, setFilters] = useFiltersStorage(initial)
-  const [list, setList] = useState<ActorProps[]>([])
-  const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const famous = await getFamous()
-        const integrated = famous.filter((actor) => actor.isIntegrated !== 'Não')
-        setList(integrated)
-      } catch (error) {
-        console.error('Erro ao carregar atores: ', error)
-      } finally {
-        setLoading(false)
-      }
-    }
+  const { actors, loading } = useActors()
 
-    fetchData()
-  }, [])
-
-  const filteredActors = useMemo(() => {
-    return getActorsFiltered(filters, list)
-  }, [filters, list])
+  if (!actors) return <p className='text-gray-300 text-2xl text-center'>Nenhum famoso na lista...</p>
 
   return (
     <>
       <Filters filters={filters} onChange={setFilters} />
 
-      {loading ? (
-        <div className='flex gap-2'>
-          <Loader2 className='animate-spin' />
-          <p>Carregando...</p>
-        </div>
-      ) : (
-        <ActorList actors={filteredActors} />
-      )}
+      {loading ? <Loading /> : <ActorList actors={actors} />}
     </>
   )
 }

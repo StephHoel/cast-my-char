@@ -1,12 +1,8 @@
 import { useState } from 'react'
-import type { FiltersState } from '@/types/filtersState'
+import type { AdvancedFiltersProps } from '@/types/advancedFilters'
 import { getFilterOptions } from '@/utils/getFilters'
 import { FilterGroup } from './FilterGroup'
 
-export type AdvancedFiltersProps = {
-  filters: FiltersState
-  toggleItem: (key: keyof FiltersState, value: string) => void
-}
 export function AdvancedFilters({ filters, toggleItem }: AdvancedFiltersProps) {
   const [showAdvanced, setShowAdvanced] = useState(false)
 
