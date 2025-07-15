@@ -17,12 +17,12 @@ Com filtros avançados e responsividade total, você pode encontrar o rosto idea
   - ~~Otimização da Build com Vite~~
   - ~~Lazy loading de imagens~~
   - ~~Code Splitting via Rotas Dinâmicas~~
-  - Melhor experiência de dev
-  - Testes automatizados
-  - Paginação ou infinite scroll
-  - Validação e animações com feedback
+  - ~~Melhor experiência de dev~~
   - Página de solicitação de inclusão de PP (com todos os campos)
   - Página de solicitação de edição de PP (com nome do pp sem possibilidade de edição + campo para dizer oq precisa ser editado)
+  - Testes automatizados
+  - Validação e animações com feedback
+  - Paginação ou infinite scroll
 -->
 
 ---

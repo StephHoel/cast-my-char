@@ -11,9 +11,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  server: {
-    warmup: {
-      clientFiles: ['src/utils/filterActors.ts', 'src/components/filters/Filters.tsx'],
-    },
-  },
 })
