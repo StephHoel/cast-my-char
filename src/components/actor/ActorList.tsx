@@ -2,8 +2,6 @@ import { ActorCard } from '@/components/actor/ActorCard'
 import type { ActorListProps } from '@/types/actorList'
 
 export function ActorList({ actors }: ActorListProps) {
-  actors = actors.sort((a, b) => a.name.localeCompare(b.name))
-
   if (actors.length === 0) {
     return <p className='mt-8 text-center text-zinc-400'>Nenhum ator ou atriz encontrado com os filtros atuais.</p>
   }

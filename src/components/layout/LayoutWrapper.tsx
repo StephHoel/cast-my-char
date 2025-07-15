@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { CACHE_KEY, TTL } from '@/constants/cache'
+import { CACHE_KEY, TIME_24HS_IN_MS } from '@/constants/cache'
 import { getFamous } from '@/services/getFamousFromSheet'
 import type { ActorProps } from '@/types/actor'
 import type { ActorsContext as ActorsContextType } from '@/types/actorsContext'
@@ -33,7 +33,7 @@ export function Layout() {
 
         setActors(filtered)
 
-        localStorage.setItem(CACHE_KEY, JSON.stringify({ value: filtered, expiry: Date.now() + TTL }))
+        localStorage.setItem(CACHE_KEY, JSON.stringify({ value: filtered, expiry: Date.now() + TIME_24HS_IN_MS }))
       })
       .finally(() => setLoading(false))
   }, [])
