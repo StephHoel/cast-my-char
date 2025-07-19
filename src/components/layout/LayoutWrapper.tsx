@@ -6,6 +6,7 @@ import type { ActorProps } from '@/types/actor'
 import type { ActorsContext as ActorsContextType } from '@/types/actorsContext'
 import { Footer } from './Footer'
 import { Header } from './Header'
+import { Toaster } from '../ui/sonner'
 
 const ActorsContext = createContext<ActorsContextType>({ actors: [], loading: true })
 
@@ -45,6 +46,7 @@ export function Layout() {
       <main className='grow px-4 py-6 sm:mx-auto'>
         <ActorsContext.Provider value={{ actors, loading }}>
           <Outlet />
+          <Toaster />
         </ActorsContext.Provider>
       </main>
 

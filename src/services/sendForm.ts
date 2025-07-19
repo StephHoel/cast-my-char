@@ -1,3 +1,4 @@
+import { toast } from 'sonner'
 import { FORM_URL } from '@/constants/routes'
 import type { SugestionFormProps } from '@/types/sugestionForm'
 
@@ -22,5 +23,11 @@ export async function sendForm(data: SugestionFormProps) {
     body: formData,
   })
 
-  alert('Enviado! Obrigada 🎉')
+  toast.success('Enviado! Obrigada 🎉', {
+    action: {
+      label: 'Undo',
+      onClick: () => {},
+    },
+    position: 'top-center',
+  })
 }
