@@ -1,13 +1,4 @@
-export type SugestionFormProps = {
-  name: string
-  link: string
-  nat: string
-  eye: string
-  hair: string
-  age: string
-  gender: string
-  tags: string
-  big: string
-  short: string
-  isIntegrated: string
-}
+import type { z } from 'zod/v4'
+import type { sugestionFormSchema } from '@/schemas/sugestionForm'
+
+export type SugestionFormProps = z.infer<typeof sugestionFormSchema>

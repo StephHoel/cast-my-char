@@ -1,7 +1,87 @@
-export const AGE_RANGES = ['Adolescente', 'Adulto', 'Idoso', 'Criança', 'Jovem Adulto', 'Bebê']
+export const AGE_RANGES = [
+  'Bebê',
+  'Criança',
+  'Adolescente',
+  'Jovem Adulto',
+  'Adulto',
+  'Idoso',
+]
 
-export const EYE_COLORS = ['Azul', 'Castanho', 'Preto', 'Verde']
+export const EYES_COLOR = [
+  'Castanho-escuro',
+  'Castanho-médio',
+  'Castanho-claro',
+  'Mel',
+  'Dourado',
+  'Acobreado',
+  'Amarelo-mel',
+  'Verde-esmeralda',
+  'Verde-oliva',
+  'Verde-acinzentado',
+  'Verde-claro',
+  'Azul-escuro',
+  'Azul-médio',
+  'Azul-claro',
+  'Azul-gelo',
+  'Azul-acinzentado',
+  'Cinza-azulado',
+  'Cinza-esverdeado',
+  'Cinza-prateado',
+  'Castanho-escuro profundo (aparência de preto)',
+  'Heterocromia completa (um olho de cada cor)',
+  'Heterocromia setorial (parte da íris com cor diferente)',
+]
 
-export const HAIR_COLORS = ['Grisalho', 'Loiro', 'Ruivo', 'Preto', 'Castanho']
+export const HAIR_COLORS = [
+  // Naturais
+  'Grisalho',
+  'Branco',
+  'Loiro',
+  'Loiro-platinado',
+  'Loiro-claro',
+  'Loiro-mel',
+  'Loiro-escuro',
+  'Ruivo',
+  'Ruivo-alaranjado',
+  'Ruivo-avermelhado',
+  'Ruivo-acobreado',
+  'Preto',
+  'Preto-azulado',
+  'Castanho',
+  'Castanho-escuro',
+  'Castanho-médio',
+  'Castanho-claro',
+  'Castanho-avermelhado',
 
-export const NATIONALITIES = ['Brasil', 'Estados Unidos', 'França', 'Japão']
+  // Fantasiosas
+  'Azul',
+  'Azul-petróleo',
+  'Azul-bebê',
+  'Verde',
+  'Verde-limão',
+  'Verde-musgo',
+  'Roxo',
+  'Lilás',
+  'Rosa',
+  'Rosa-choque',
+  'Rosa-pastel',
+  'Vermelho',
+  'Vermelho-vivo',
+  'Laranja',
+  'Amarelo',
+  'Cinza',
+  'Prata',
+  'Turquesa',
+  'Ciano',
+  'Colorido (arco-íris)',
+  'Mesclado (duas ou mais cores)',
+]
+
+export const GENDERS = [
+  'Feminino',
+  'Masculino',
+  'Não binário',
+  'Gênero fluido',
+  'Homem trans',
+  'Mulher trans',
+]

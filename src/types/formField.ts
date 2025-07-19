@@ -5,18 +5,7 @@ import type { SugestionFormProps } from './sugestionForm'
 export type FormFieldProps = {
   control: Control<SugestionFormProps, any, SugestionFormProps>
   isSubmitting: boolean
-  name:
-    | 'name'
-    | 'big'
-    | 'link'
-    | 'nat'
-    | 'eye'
-    | 'hair'
-    | 'age'
-    | 'gender'
-    | 'tags'
-    | 'short'
-    | 'isIntegrated'
+  name: keyof SugestionFormProps
   label: string
   description: string
   placeholder: string

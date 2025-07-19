@@ -9,15 +9,16 @@ export function useSugestionForm() {
     defaultValues: {
       name: '',
       link: '',
-      age: '',
       big: '',
-      eye: '',
-      gender: '',
-      hair: '',
-      isIntegrated: '',
-      nat: '',
       short: '',
-      tags: '',
+      isIntegrated: '',
+      eye: [],
+      age: [],
+      gender: [],
+      hair: [],
+      nat: [],
+      tags: [],
     },
+    mode: 'onSubmit',
   })
 }
