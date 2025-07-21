@@ -1,9 +1,10 @@
+export const URL_BASE = '/cast-my-char'
+
 export const url = {
-  base: '/cast-my-char',
-  index: '/',
-  form: '/?/form',
-  famous: '/?/famous/:id',
-  notFound: '*',
+  index: `${URL_BASE}/`,
+  form: `${URL_BASE}/?/form`,
+  famous: `${URL_BASE}/?/famous/:id`,
+  notFound: `${URL_BASE}/*`,
 }
 
 export const SHEET_URL =

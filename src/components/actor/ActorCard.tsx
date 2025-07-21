@@ -17,11 +17,11 @@ export function ActorCard({ actor }: ActorCardProps) {
           <h2 className='text-lg font-semibold text-white'>{actor.name}</h2>
 
           <p className='text-sm text-gray-400'>
-            {firstNationality + (actor.nationality.length > 1 ? ` + ${actor.nationality.length - 1}` : '')}
+            {firstNationality + (actor.nationality.length > 1 ? ` + ${actor.nationality.length - 1}` : '') || '\u00A0'}
           </p>
 
           <p className='text-sm text-gray-400'>
-            {firstAge + (actor.ageRange.length > 1 ? ` + ${actor.ageRange.length - 1}` : '')}
+            {firstAge + (actor.ageRange.length > 1 ? ` + ${actor.ageRange.length - 1}` : '') || '\u00A0'}
           </p>
         </div>
       </div>

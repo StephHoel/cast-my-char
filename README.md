@@ -7,7 +7,7 @@ Com filtros avançados e responsividade total, você pode encontrar o rosto idea
 
 ## 🖼️ Demonstração
 
-> 🔗 [Acesse o site online via GitHub Pages](https://stephhoel.github.io/castmychar)
+> 🔗 [Acesse o site online via GitHub Pages](https://stephhoel.github.io/cast-my-char)
 
 <!--
   Quero implementar:
@@ -19,11 +19,11 @@ Com filtros avançados e responsividade total, você pode encontrar o rosto idea
   - ~~Code Splitting via Rotas Dinâmicas~~
   - ~~Melhor experiência de dev~~
   - ~~Página de solicitação de inclusão de PP (com todos os campos)~~
+  - ~~Trocar alert() por toast (da sonner | procurar como fazer)~~
   - Página de solicitação de edição de PP (com nome do pp sem possibilidade de edição + campo para dizer oq precisa ser editado)
   - Testes automatizados
   - Validação e animações com feedback
   - Paginação ou infinite scroll
-  - Trocar alert() por toast (da sonner | procurar como fazer)
 -->
 
 ---

@@ -55,6 +55,9 @@
 
     var path = l.pathname.slice(1).split('/').slice(1).join('/').replace(/&/g, '~and~') + (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') + l.hash
 
+    console.log('l ', l)
+    console.log('new url ', host + site + path)
+
     l.replace(host + site + path)
 
   </script>
