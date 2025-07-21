@@ -1,6 +1,6 @@
-# 🎭 CastMyChar
+# 🎭 Cast My Char
 
-**CastMyChar** é uma galeria visual de faceclaims (FCs) e playbys (PPs) para personagens de RPG e fanfics.  
+**Cast My Char** é uma galeria visual de faceclaims (FCs) e playbys (PPs) para personagens de RPG e fanfics.  
 Com filtros avançados e responsividade total, você pode encontrar o rosto ideal para o seu personagem com rapidez e estilo.
 
 ---
@@ -41,55 +41,30 @@ Com filtros avançados e responsividade total, você pode encontrar o rosto idea
 ## 📁 Estrutura de Pastas
 
 ```bash
-castmychar/
-├── public/                    # Arquivos públicos (favicon, imagens, etc.)
+cast-my-char/
+├── public/
 ├── src/
-│   ├── assets/                # Imagens e ícones do projeto
-│   ├── components/            # Componentes reutilizáveis
-│   │   ├── layout/
-│   │   │   ├── Header.tsx
-│   │   │   ├── Footer.tsx
-│   │   │   └── LayoutWrapper.tsx
-│   │   ├── filters/
-│   │   │   └── Filters.tsx
-│   │   ├── actor/
-│   │   │   ├── ActorCard.tsx
-│   │   │   └── ActorList.tsx
-│   ├── data/                  # Dados estáticos em formato TS
-│   │   └── actors.ts
-│   ├── pages/                 # Páginas
-│   │   ├── Home.tsx
-│   │   └── NotFound.tsx
+│   ├── assets/
+│   ├── components/
+│   ├── constants/
+│   ├── hooks/
+│   ├── lib/
+│   ├── pages/
 │   ├── router/
-│   │   ├── index.tsx          # Define BrowserRouter
-│   │   └── routes.ts          # Define rotas
-│   ├── types/                 # Tipagens compartilhadas
-│   │   └── index.ts
-│   ├── index.css              # Estilos globais (Tailwind)
-│   ├── vite-env.d.ts
-│   └── main.tsx               # Ponto de entrada React
-├── .gitignore
-├── index.html
-├── package-lock.json
-├── package.json
-├── postcss.config.js
-├── README.md
-├── tailwind.config.js
-├── tsconfig.app.json
-├── tsconfig.json
-├── tsconfig.node.json
-└── vite.config.ts
+│   ├── schemas/
+│   ├── services/
+│   ├── types/
+│   └── utils/
 ````
 
 ---
 
 ## ✨ Funcionalidades
 
-* 🔍 **Busca por nome**
-* 🎚️ **Filtros combináveis** (nacionalidade, cor dos olhos, cor do cabelo, faixa etária etc.)
-* 🖼️ **Lista de atores/atrizes com imagem, nome e características**
-* 📱 **Totalmente responsivo** (desktop, tablet e mobile)
-* 🦶 **Rodapé fixo ou dinâmico**, conforme o conteúdo da página
+- 🔍 **Busca por nome**
+- 🎚️ **Filtros combináveis** (nacionalidade, cor dos olhos, cor do cabelo, faixa etária, etc.)
+- 🖼️ **Lista de atores/atrizes com imagem, nome e características**
+- 📱 **Totalmente responsivo** (desktop, tablet e mobile)
 
 ---
 
@@ -97,8 +72,13 @@ castmychar/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/stephhoel/castmychar.git
-cd castmychar
+git clone https://github.com/stephhoel/cast-my-char.git
+
+# Acesse a pasta
+cd cast-my-char/
+
+# Troque a branch
+git checkout -b <nova_branch>
 
 # Instale as dependências
 npm install
@@ -112,13 +92,13 @@ npm install
 npm run dev
 ```
 
-Abra `http://localhost:5173` no navegador.
+Abra `http://localhost:5173/cast-my-char` no navegador.
 
 ---
 
 ## 🛠️ Build para produção
 
-Basta fazer um pull-request para a branch `main`.
+Basta fazer um pull-request para a branch `main` e aguardar revisão/aprovação.
 
 ---
 
